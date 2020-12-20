@@ -4,11 +4,13 @@ import Card from './app/components/Card';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
+import MessagesScreen from './app/screens/MessagesScreen';
 
 export default function App() {
   //return <WelcomeScreen/>;
-  return <ViewImageScreen/>;
+  //return <ViewImageScreen/>;
   //return <ListingDetailsScreen/>;
+  return <MessagesScreen/>;
 
   // return(
   //   <View style={{
