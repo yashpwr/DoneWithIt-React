@@ -7,8 +7,8 @@ import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 
 export default function App() {
   //return <WelcomeScreen/>;
-  //return <ViewImageScreen/>;
-  return <ListingDetailsScreen/>;
+  return <ViewImageScreen/>;
+  //return <ListingDetailsScreen/>;
 
   // return(
   //   <View style={{
