@@ -8,19 +8,21 @@ import MessagesScreen from './app/screens/MessagesScreen';
 import Screen from "./app/components/Screen"
 import Icon from './app/components/Icon';
 import ListItem from './app/components/ListItem';
+import AccountScreen from './app/screens/AccountScreen';
 
 export default function App() {
   //return <WelcomeScreen/>;
   //return <ViewImageScreen/>;
   //return <ListingDetailsScreen/>;
   //return <MessagesScreen/>;
-
-  return(
-    <Screen>
-      <ListItem 
-        title="I Love React Native !" 
-        subTitle="Yaa That's TRUE"
-        ImageComponent={<Icon name="heart" iconColor="red" />} />
-    </Screen>
-  );
+  return <AccountScreen/>;
+  
+  // return(
+  //   <Screen>
+  //     <ListItem 
+  //       title="I Love React Native !" 
+  //       subTitle="Yaa That's TRUE"
+  //       ImageComponent={<Icon name="heart" iconColor="red" />} />
+  //   </Screen>
+  // );
 }
