@@ -11,6 +11,7 @@ import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
 import ListingScreen from './app/screens/ListingScreen';
 import AppTextInput from './app/components/AppTextInput';
+import AppPicker from './app/components/AppPicker';
 
 export default function App() {
   //return <WelcomeScreen/>;
@@ -20,12 +21,13 @@ export default function App() {
   //return <AccountScreen/>;
   //return <ListingScreen/>;
 
-  
+
   const [isNew, setisNew] = useState(false);
 
   return(
     <Screen>
-      <Switch value={isNew} onValueChange={newValue => setisNew(newValue)} />
+      <AppPicker icon="apps" placeholder="Category" />
+      <AppTextInput icon="email" placeholder="Email"/>
     </Screen>
   );
 }
