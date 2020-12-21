@@ -1,5 +1,5 @@
-import React from 'react';
-import { View } from 'react-native';
+import React, {useState} from 'react';
+import { Text, TextInput, View } from 'react-native';
 import Card from './app/components/Card';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
@@ -10,6 +10,7 @@ import Icon from './app/components/Icon';
 import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
 import ListingScreen from './app/screens/ListingScreen';
+import AppTextInput from './app/components/AppTextInput';
 
 export default function App() {
   //return <WelcomeScreen/>;
@@ -17,14 +18,14 @@ export default function App() {
   //return <ListingDetailsScreen/>;
   //return <MessagesScreen/>;
   //return <AccountScreen/>;
-  return <ListingScreen/>;
+  //return <ListingScreen/>;
   
-  // return(
-  //   <Screen>
-  //     <ListItem 
-  //       title="I Love React Native !" 
-  //       subTitle="Yaa That's TRUE"
-  //       ImageComponent={<Icon name="heart" iconColor="red" />} />
-  //   </Screen>
-  // );
+  //const [firstname, setFirstname] = useState('');
+  return(
+    <Screen>
+      <AppTextInput 
+        placeholder="Username" icon="email"
+      />
+    </Screen>
+  );
 }

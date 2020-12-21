@@ -31,7 +31,7 @@ function ListingScreen(props) {
                     title={item.title}
                     subTitle={"$"+item.price}
                     image={item.image}
-                    />    
+                />    
             }
             />
         </Screen>
