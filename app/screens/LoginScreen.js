@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Image, StyleSheet } from 'react-native'
-import { Formik } from "formik";
+import {  Formik } from "formik";
+import * as Yup from 'yup';
 
 import AppTextInput from '../components/AppTextInput';
 import Screen from '../components/Screen'
 import AppButton from '../components/AppButton'
-import * as Yup from 'yup';
-import AppText from '../components/AppText';
+import ErrorMessage from '../components/ErrorMessage';
 
 const validationSchema = Yup.object().shape({
     email: Yup.string().required().email().label("Email"),
@@ -14,9 +14,6 @@ const validationSchema = Yup.object().shape({
 })
 
 function LoginScreen(props) {
-
-    //const [email, setEmail] = useState();
-    //const [password, setPassword] = useState();
 
     return (
         <Screen style={styles.container}>
@@ -36,28 +33,25 @@ function LoginScreen(props) {
                             autoCorrect={false}
                             icon="email"
                             keyboardType="email-address"
-                            // onChangeText={text => setEmail(text)}
                             onChangeText={handleChange("email")}
                             placeholder="Email"
                             textContentType="emailAddress"
                         />
-                        <AppText style={{ color: 'red' }}>{errors.email}</AppText>
+                        <ErrorMessage error={errors.email} />
 
                         <AppTextInput 
                             autoCapitalize="none"
                             autoCorrect={false}
                             icon="lock"
-                            //onChangeText={text => setPassword(text)}
                             onChangeText={handleChange("password")}
                             placeholder="Password"
                             secureTextEntry={true}
                             textContentType="password"
                         />
-                        <AppText style={{ color: 'red' }}>{errors.password}</AppText>
+                        <ErrorMessage error={errors.password} />
 
                         <AppButton 
                             title="Login" 
-                            //onPress={() => console.log(email, password)} 
                             onPress={handleSubmit} 
                         />
                     </>
