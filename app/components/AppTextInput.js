@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import {MaterialCommunityIcons} from "@expo/vector-icons";
+import {MaterialCommunityIcons } from "@expo/vector-icons";
 import { TextInput } from 'react-native-gesture-handler';
 
 import defaultStyle from '../config/styles';
@@ -8,7 +8,7 @@ import defaultStyle from '../config/styles';
 function AppTextInput({icon, ...otherProps}) {
     return (
         <View style={styles.container}>
-            { icon && <MaterialCommunityIcons 
+            { icon && <MaterialCommunityIcons
                             name={icon} size={20} 
                             color={defaultStyle.colors.medium} 
                             style={styles.icon} 

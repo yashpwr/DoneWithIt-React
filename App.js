@@ -1,30 +1,9 @@
-import React, {useState} from 'react';
-import Screen from "./app/components/Screen";
-import AppTextInput from './app/components/AppTextInput';
-import AppPicker from './app/components/AppPicker';
-import LoginScreen from './app/screens/LoginScreen';
-import ListingEditScreen from './app/screens/ListingEditScreen';
+import React from 'react';
 
-
+import RegisterScreen from './app/screens/RegisterScreen';
 
 export default function App() {
-
   return(
-    <ListingEditScreen/>
+    <RegisterScreen/>
   );
-
-  //const [Category, setCategory] = useState(categories[0]);
-
-  // return(
-  //   <Screen>
-  //     <AppPicker
-  //         selectedItem={Category}
-  //         onSelectItem={item => setCategory(item)}
-  //         items={categories} 
-  //         icon="apps" 
-  //         placeholder="Category" />
-
-  //     <AppTextInput icon="email" placeholder="Email"/>
-  //   </Screen>
-  // );
 }
