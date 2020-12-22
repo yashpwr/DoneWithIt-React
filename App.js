@@ -7,7 +7,7 @@ import RegisterScreen from './app/screens/RegisterScreen';
 export default function App() {
   return(
     //<RegisterScreen/>
-    //<MessagesScreen />
-    <ListingScreen/>
+    <MessagesScreen />
+    //<ListingScreen/>
   );
 }
